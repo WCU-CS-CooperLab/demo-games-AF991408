@@ -8,5 +8,5 @@ Coin_Dash
 5. [Player Scene -5](Player_Scene_Fin/)
 
 Space_Rocks
-1. [Player Scene -1](SpaceRocks.html/)
-
+1. [Player Scene -6](SpaceRocks.html/)
+1. [Player Scene -7](SpaceRocks_01/)
