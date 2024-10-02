@@ -17,4 +17,4 @@ Space_Rocks
 project 1 
 1. [phase1](project1temp/)
 
-2. [FINAL - PROJECT 1](Project1finished/)
+2. [Phase 2 - PROJECT 1](Phase2Project1/)
