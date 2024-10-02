@@ -15,6 +15,6 @@ Space_Rocks
 
 
 project 1 
-1. [Phase 2 - PROJECT 1](phase1project1/)
+1. [Phase 2 - PROJECT 1](phase1coindash/)
 
 2. [Phase 2 - PROJECT 1](Phase2Project1/)
