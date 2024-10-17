@@ -32,7 +32,7 @@ project 1
 project 2
 1. [Phase 1 - PROJECT 2](phase1Project2/)
 
-2. phase 2 - project 2 IN THE WORKS
+2. [Phase 2 - PROJECT 2](phase2Project2/)
 
 
 
