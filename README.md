@@ -9,7 +9,7 @@ Coin_Dash
 
 Space_Rocks
 
-1. [Player Scene](space_rocks_f/)
+1. [Player Scene](spacerocks_fixed/)
 
 
 
@@ -36,7 +36,7 @@ project 2
 2. [Phase 2 - PROJECT 2](Project2/)
 
 project 3
-1. [Phase 1 - PROJECT 3](space_rocks_f/)
+1. [Phase 1 - PROJECT 3](spacerocks_fixed/)
 
 2. [Phase 2 - PROJECT 3] [IN PROGRESS]
 
