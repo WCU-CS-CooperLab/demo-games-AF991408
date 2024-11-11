@@ -2,8 +2,8 @@
 A template repository to publish games
 
 
-Team Project 1
-[Player Scene](johnwick/)
+Team Project 1 - Bridge Quest
+1. [Player Scene](BridgeQuest/)
 
 
 
