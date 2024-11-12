@@ -27,7 +27,8 @@ golf
 
 Jungle Jump
 1. [Player Scene - Demo](junglejumpdemo2/)
-2. [Player Scene](jungle_jump_done/)
+2. [Player Scene - Demo2](jungle_jump_done/)
+3. [Player Scene - Finished](JungleJumpCompleted/)
 
 Flyer
 1. [Player Scene](FlyerProject/)
@@ -44,7 +45,7 @@ project 2
 2. [Phase 2 - PROJECT 2](Project2/)
 
 project 3
-1. [Phase 1 - PROJECT 3](spacerocks_fixed/)
+1. [Phase 1 - PROJECT 3](JungleJumpCompleted/)
 
 2. [Phase 2 - PROJECT 3] [IN PROGRESS]
 
