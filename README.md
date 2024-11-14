@@ -1,7 +1,7 @@
 # GamePublish
 A template repository to publish games
 
-
+adam faust
 Team Project 1 - Bridge Quest
 1. [Player Scene](BridgeQuest/)
 
