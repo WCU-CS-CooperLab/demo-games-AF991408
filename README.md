@@ -47,5 +47,5 @@ project 2
 project 3
 1. [Phase 1 - PROJECT 3](JungleJumpCompleted/)
 
-2. [Phase 2 - PROJECT 3] [IN PROGRESS]
+2. [Phase 2 - PROJECT 3](project3finished/)
 
