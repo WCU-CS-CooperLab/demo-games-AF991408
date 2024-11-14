@@ -42,7 +42,7 @@ project 1
 project 2
 1. [Phase 1 - PROJECT 2](phase1Project2/)
 
-2. [Phase 2 - PROJECT 2](Project2/)
+2. [Phase 2 - PROJECT 2](project2phase2/)
 
 project 3
 1. [Phase 1 - PROJECT 3](JungleJumpCompleted/)
