@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://bergag3vsc4s0"]
+
+[ext_resource type="FontFile" uid="uid://cdcejrrv8mhwa" path="res://PixelPowerline-9xOK.ttf" id="1_ajmxc"]
+[ext_resource type="Script" path="res://hud.gd" id="1_bliig"]
+[ext_resource type="Texture2D" uid="uid://whcqu6musrb2" path="res://pixel_art.png" id="3_ryd4l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kudcc"]
+font = ExtResource("1_ajmxc")
+font_size = 32
+font_color = Color(1, 1, 0, 1)
+outline_color = Color(1, 0.352941, 0, 1)
+shadow_size = 8
+shadow_color = Color(0.372549, 0, 0, 1)
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_owy1w"]
+font = ExtResource("1_ajmxc")
+font_color = Color(1, 1, 0, 1)
+shadow_color = Color(0.372549, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_se6ih"]
+font = ExtResource("1_ajmxc")
+font_size = 24
+font_color = Color(1, 1, 0, 1)
+shadow_size = 4
+shadow_color = Color(0.372549, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xqkmu"]
+font = ExtResource("1_ajmxc")
+font_size = 38
+font_color = Color(1, 1, 0, 1)
+shadow_size = 8
+shadow_color = Color(0.372549, 0, 0, 1)
+shadow_offset = Vector2(8, 8)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_bliig")
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.66
+anchor_right = 0.5
+anchor_bottom = 0.66
+offset_left = -16.0
+offset_top = -21.68
+offset_right = 24.0
+offset_bottom = 35.32
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_kudcc")
+
+[node name="Time" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 619.0
+offset_right = 68.0
+offset_bottom = 639.0
+label_settings = SubResource("LabelSettings_owy1w")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Score" type="Label" parent="MarginContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_se6ih")
+
+[node name="Level" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Level 1"
+label_settings = SubResource("LabelSettings_xqkmu")
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="keynum" type="Label" parent="."]
+offset_left = 1107.0
+offset_top = 595.0
+offset_right = 1132.0
+offset_bottom = 641.0
+text = "0"
+label_settings = SubResource("LabelSettings_se6ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1069.0
+offset_top = -45.0
+offset_right = 2093.0
+offset_bottom = 467.0
+grow_vertical = 0
+
+[node name="key1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ryd4l")
+stretch_mode = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

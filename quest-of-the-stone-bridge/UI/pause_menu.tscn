@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdq3o01wy1je"]
+
+[ext_resource type="FontFile" uid="uid://cdcejrrv8mhwa" path="res://PixelPowerline-9xOK.ttf" id="1_5js4e"]
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_i0qcw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7suuw"]
+font = ExtResource("1_5js4e")
+font_size = 30
+font_color = Color(1, 1, 0, 1)
+shadow_color = Color(0.372549, 0, 0, 1)
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_i0qcw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseLable" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Pause
+"
+label_settings = SubResource("LabelSettings_7suuw")
+horizontal_alignment = 1
+
+[node name="BackToTitleButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.372549, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0.72549, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("1_5js4e")
+theme_override_font_sizes/font_size = 20
+text = "Back To Title Screen"
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.372549, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0.72549, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("1_5js4e")
+theme_override_font_sizes/font_size = 20
+text = "Resume"
+
+[connection signal="pressed" from="VBoxContainer/BackToTitleButton" to="." method="_on_back_to_title_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
