@@ -30,19 +30,15 @@ A template repository to publish games
 
 
 
-4. [Player Scene](player_scene_08_30_me/)
-5. [HUD + Background](Player_Scene_Fin/)
-1. [Final Ver](phase1coindash/)
+1. [Player Scene](player_scene_08_30_me/)
+2. [HUD + Background](Player_Scene_Fin/)
+3. [Final Ver](phase1coindash/)
 
 ## Space Rocks
-1. [Player Scene](SpaceRocks_01/)
-1. [Player Scene](SpaceRocks_02/)
-1. [Player Scene](SpaceRocks_09_11/)
-1. [Player Scene](SpaceRocks_09_13/)
-1. [Player Scene](space_rocks_f/)
 
+1. [Player Scene w/ Background + Shooting](SpaceRocks_09_13/)
 
-1. [Player Scene](spacerocks_fixed/)
+2. [Final Ver](space_rocks_done/)
 
 
 
