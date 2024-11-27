@@ -21,6 +21,9 @@ A template repository to publish games
 
 2. [Phase 2 - PROJECT 3](project3finished/)
 
+## Project 4
+1. Figuring out to finish it with the server
+
 ## Coin Dash
 [8/30] Player Scene
 * Made Player using Sprite2d with assets 
