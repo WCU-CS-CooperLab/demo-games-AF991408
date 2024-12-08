@@ -22,9 +22,9 @@ A template repository to publish games
 2. [Phase 2 - PROJECT 3](project3finished/)
 
 ## Project 4
-1. [Phase 1 - PROJECT 4](project4complete/)
+1. [Project 4 Solo Web Published Ver](Project4SoloWebPubished/)
 
-2. phase 2 = having trouble with server
+
 
 ## Coin Dash
 [8/30] Player Scene
