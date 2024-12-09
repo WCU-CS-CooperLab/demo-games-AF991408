@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuya8t1a4ft16"]
+
+[ext_resource type="Script" path="res://big_guy_spawner.gd" id="1_kd4q8"]
+
+[node name="big_guy_spawner" type="Marker2D"]
+script = ExtResource("1_kd4q8")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://big_guy_spawner.tscn")
+spawn_path = NodePath("..")
+
+[connection signal="spawned" from="MultiplayerSpawner" to="." method="_on_multiplayer_spawner_spawned"]

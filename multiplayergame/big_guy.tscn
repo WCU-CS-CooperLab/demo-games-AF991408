@@ -1,0 +1,331 @@
+[gd_scene load_steps=27 format=3 uid="uid://cw6davw2up3r4"]
+
+[ext_resource type="Script" path="res://big_guy.gd" id="1_g6ont"]
+[ext_resource type="Texture2D" uid="uid://d0h0wnoa8a27w" path="res://bigmanassets/bigattack3better.png" id="2_50bv2"]
+[ext_resource type="PackedScene" uid="uid://cgmqt6gesnkr8" path="res://hud.tscn" id="2_b8gfv"]
+[ext_resource type="Texture2D" uid="uid://boi4mberq38us" path="res://bigmanassets/bigfall.png" id="3_ox8id"]
+[ext_resource type="Texture2D" uid="uid://3diltee4veby" path="res://bigmanassets/bigjump.png" id="4_hvj3g"]
+[ext_resource type="Texture2D" uid="uid://bveeitt014ee" path="res://bigmanassets/bigidle.png" id="5_xd0c3"]
+[ext_resource type="Texture2D" uid="uid://pbm45oiu38xe" path="res://bigmanassets/bigwalk.png" id="6_8ljv0"]
+[ext_resource type="Texture2D" uid="uid://b8crvc7yu3178" path="res://blueguyassets/dot-1.png.png" id="7_31ejp"]
+[ext_resource type="AudioStream" uid="uid://datlpr834a02c" path="res://bigmanassets/sword-swing-whoosh-sound-effect-1-241824.mp3" id="9_yg4ad"]
+[ext_resource type="AudioStream" uid="uid://c5l18gwrma3l" path="res://bigmanassets/lightening-bang-impact-40580.mp3" id="10_xmb1r"]
+[ext_resource type="AudioStream" uid="uid://bwomcmkea8crm" path="res://bigmanassets/explosion-under-snow-sfx-230505.mp3" id="11_nj64m"]
+[ext_resource type="AudioStream" uid="uid://bw2c3mo3fwoaa" path="res://bigmanassets/robot-heavy-mechanical-footsteps-194039.mp3" id="12_xbggv"]
+[ext_resource type="AudioStream" uid="uid://cr7pwu65a1n45" path="res://bigmanassets/horror-scary-human-whisper-ghost-05-257014.mp3" id="13_bx4ul"]
+[ext_resource type="Texture2D" uid="uid://ckqvj2vujdlwi" path="res://items/Kyrise's 16x16 RPG Icon Pack - V1.3/icons/16x16/shield_03e.png" id="14_kb231"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5dvf"]
+size = Vector2(36.6667, 50.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf1oc"]
+size = Vector2(46.4896, 53.0791)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqu6v"]
+size = Vector2(45.9349, 50.7513)
+
+[sub_resource type="Animation" id="Animation_ebm6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hit1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fall:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("jump:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("idle:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("run:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_525mn"]
+resource_name = "fall"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fall:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_f6t8n"]
+resource_name = "hit1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hit1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.233333, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_1gilg"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_bdapy"]
+resource_name = "jump"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("jump:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_cvqa4"]
+resource_name = "run"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("run:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_73apu"]
+_data = {
+"RESET": SubResource("Animation_ebm6x"),
+"fall": SubResource("Animation_525mn"),
+"hit1": SubResource("Animation_f6t8n"),
+"idle": SubResource("Animation_1gilg"),
+"jump": SubResource("Animation_bdapy"),
+"run": SubResource("Animation_cvqa4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmc55"]
+size = Vector2(36.6667, 48)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rob0b"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("AnimationPlayer:current_animation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("hit1:frame")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("fall:frame")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("jump:frame")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("idle:frame")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath("run:frame")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("rightdot:frame")
+properties/7/spawn = true
+properties/7/replication_mode = 1
+properties/8/path = NodePath("leftdot:frame")
+properties/8/spawn = true
+properties/8/replication_mode = 1
+
+[node name="big_guy" type="CharacterBody2D" groups=["characters"]]
+scale = Vector2(2.5, 2.167)
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("1_g6ont")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 24.6667)
+shape = SubResource("RectangleShape2D_o5dvf")
+
+[node name="hit1" type="Sprite2D" parent="."]
+texture = ExtResource("2_50bv2")
+hframes = 4
+
+[node name="hit1colarR" type="Area2D" parent="." groups=["danger"]]
+position = Vector2(48, 18.8235)
+rotation = -0.532326
+collision_layer = 3
+collision_mask = 3
+
+[node name="hit1col" type="CollisionShape2D" parent="hit1colarR" groups=["danger"]]
+position = Vector2(0.837044, 6.12303)
+rotation = -1.02276
+shape = SubResource("RectangleShape2D_pf1oc")
+
+[node name="hit1colarL" type="Area2D" parent="." groups=["danger"]]
+position = Vector2(-37, 18.8235)
+rotation = -0.532326
+
+[node name="hit1col" type="CollisionShape2D" parent="hit1colarL" groups=["danger"]]
+position = Vector2(-11.0181, -1.67768)
+rotation = -1.02276
+shape = SubResource("RectangleShape2D_iqu6v")
+
+[node name="fall" type="Sprite2D" parent="."]
+texture = ExtResource("3_ox8id")
+hframes = 2
+
+[node name="jump" type="Sprite2D" parent="."]
+texture = ExtResource("4_hvj3g")
+hframes = 2
+
+[node name="idle" type="Sprite2D" parent="."]
+texture = ExtResource("5_xd0c3")
+hframes = 8
+frame = 1
+
+[node name="run" type="Sprite2D" parent="."]
+texture = ExtResource("6_8ljv0")
+hframes = 8
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_73apu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.33333, 22.6667)
+shape = SubResource("RectangleShape2D_cmc55")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="rightdot" type="Sprite2D" parent="."]
+modulate = Color(0.668285, 0.221515, 0.382394, 1)
+position = Vector2(57, 15)
+texture = ExtResource("7_31ejp")
+
+[node name="leftdot" type="Sprite2D" parent="."]
+modulate = Color(0.666667, 0.219608, 0.384314, 1)
+position = Vector2(-57, 15)
+texture = ExtResource("7_31ejp")
+
+[node name="HUD" parent="." instance=ExtResource("2_b8gfv")]
+offset_left = -29.3333
+offset_top = 53.0769
+offset_right = 318.667
+offset_bottom = 160.077
+scale = Vector2(0.17, 0.17)
+
+[node name="swing1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_yg4ad")
+
+[node name="bang" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_xmb1r")
+
+[node name="explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nj64m")
+
+[node name="footstep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_xbggv")
+volume_db = -0.65
+
+[node name="diesound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_bx4ul")
+
+[node name="Shield" type="TextureRect" parent="."]
+visible = false
+offset_left = 10.0
+offset_top = -38.8235
+offset_right = 34.0
+offset_bottom = -14.8235
+texture = ExtResource("14_kb231")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rob0b")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

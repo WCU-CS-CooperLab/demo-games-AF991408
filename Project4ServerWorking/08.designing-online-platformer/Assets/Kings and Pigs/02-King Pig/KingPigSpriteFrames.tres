@@ -1,0 +1,75 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://q6p1hal4oxix"]
+
+[ext_resource type="Texture2D" uid="uid://bbk18hkq42asv" path="res://new/vers/attack ver.png" id="1_wjw34"]
+[ext_resource type="Texture2D" uid="uid://djsmlywib6u0t" path="res://new/vers/idle ver.png" id="2_br0xm"]
+[ext_resource type="Texture2D" uid="uid://bislkscco3uvr" path="res://new/vers/falling ver.png" id="3_c72qn"]
+[ext_resource type="Texture2D" uid="uid://7obk5wfqmg57" path="res://new/vers/ground ver.png" id="4_c7e83"]
+[ext_resource type="Texture2D" uid="uid://hf8wtdveygym" path="res://new/vers/jump ver.png" id="5_1sqs5"]
+[ext_resource type="Texture2D" uid="uid://n4yiyxstcoi6" path="res://new/vers/run ver.png" id="6_6avma"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wjw34")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_br0xm")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c72qn")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_c7e83")
+}],
+"loop": false,
+"name": &"ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_br0xm")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_br0xm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1sqs5")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6avma")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]

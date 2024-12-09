@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dacllk60yxphu"]
+
+[ext_resource type="Script" path="res://GlobalSongPlayer.gd" id="1_wkn1j"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_wkn1j")

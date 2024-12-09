@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cksjy44kvvufe"]
+
+[ext_resource type="Script" path="res://blue_player_spawner.gd" id="1_kfhcj"]
+
+[node name="blue_player_spawner" type="Marker2D"]
+script = ExtResource("1_kfhcj")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://blue_player_spawner.tscn")
+spawn_path = NodePath("..")

@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgmqt6gesnkr8"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_d00sl"]
+[ext_resource type="Texture2D" uid="uid://cnknjw1opypwr" path="res://armorpng.png" id="2_17o66"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4s621"]
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wgpl3"]
+font_size = 43
+font_color = Color(1, 1, 0.0901961, 1)
+outline_size = 14
+outline_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="HUD" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_d00sl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+label_settings = SubResource("LabelSettings_4s621")
+
+[node name="LifeCounter" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="L1" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+visible = false
+layout_mode = 2
+
+[node name="L2" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+visible = false
+layout_mode = 2
+
+[node name="armor1" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_17o66")
+
+[node name="armor2" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_17o66")
+
+[node name="armor3" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_17o66")
+
+[node name="armor4" type="TextureRect" parent="HBoxContainer/LifeCounter"]
+layout_mode = 2
+texture = ExtResource("2_17o66")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_wgpl3")

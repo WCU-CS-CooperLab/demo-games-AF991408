@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c15fedfc13g7v"]
+
+[ext_resource type="Script" path="res://server.gd" id="1_lt4t6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjqks"]
+font_size = 40
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lt4t6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 1911.0
+offset_bottom = 199.0
+grow_horizontal = 2
+text = "I am a server"
+label_settings = SubResource("LabelSettings_rjqks")
+horizontal_alignment = 1

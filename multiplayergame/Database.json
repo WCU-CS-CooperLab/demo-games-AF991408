@@ -1,0 +1,26 @@
+{
+	"player1": {
+		"password":"test",
+		"name":"Sakaki"
+	},
+	"player2": {
+		"password":"test",
+		"name":"Keyaki"
+	},
+	"player3": {
+		"password":"test",
+		"name":"player3"
+	},
+	"player4": {
+		"password":"test",
+		"name":"player4"
+	},
+	"player5": {
+		"password":"test",
+		"name":"player5"
+	},
+	"player6": {
+		"password":"test",
+		"name":"player6"
+	}
+}
