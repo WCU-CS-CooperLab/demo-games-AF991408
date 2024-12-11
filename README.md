@@ -11,8 +11,8 @@ A template repository to publish games
 2. [code](multiplayergame/)
 3. [server lite ver](Project4ServerWorking/)
 
-4. [windows](WINDOWSSERVERversion.zip)
-5. [mac](MACVersionServer.zip)
+4. [windows](updatedWINDOWSversion.zip)
+5. [mac](updatedMACversion.zip)
 
 ## Project 1 
 1. [Phase 1 - PROJECT 1](phase1coindash/)
